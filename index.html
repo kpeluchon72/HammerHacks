@@ -7,6 +7,10 @@
                 width: 600px;
                 height: auto;
             }
+            
+            h1 {
+                color: red;
+            }
         </style>
 
     </head>
@@ -14,7 +18,33 @@
         <h1>My Cool Website</h1>
         <p>I think HTML is neat!</p>
 
-        <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FEastern_gray_squirrel&psig=AOvVaw14V-AtK-ap__a5lWWV-J4N&ust=1732455749224000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCPiy9dzK8okDFQAAAAAdAAAAABAE">
+        <img src="https://owl-online.org/wp-content/uploads/2020/10/Juvenile-Squirrel-300x213.jpg">
 
+        <blockquote>"Squirrel" </blockquote>
+
+        <button onclick="changeQuote()">Change Quote</button>
+
+        <script>
+            var index = 0;
+
+            function changeQuote() {
+                var quotes = [
+                    `"I really like squirrels!" - Kevin Peluchon`,
+                    `"Hammer Hacks is fun" - Kevin Peluchon`,
+                    `"Hellooo!" - Kevin Peluchon`,
+                    `"Squirrel" - Kevin Peluchon`
+                ];
+
+                var blockquote = document.querySelector("blockquote");
+                blockquote.innerHTML= quotes[index];
+            
+                index++;
+                if (index >= 4) {
+                    index = 0;
+                }
+
+                
+            }
+        </script>
     </body>
 </html>
